@@ -1,3 +1,5 @@
+from distutils.versionpredicate import re_paren
+
 
 def start_title():
     print("DEALER'S CHOICE")
@@ -5,11 +7,9 @@ def start_title():
     print("MORRISTOWN, NEW JERSEY")
     print()
     print("THIS PROGRAM WILL SIMULATE THE T.V. SHOW, DEALER'S CHOICE.")
-
-
-def main():
-    start_title()
     print("YOU HAVE $100 TO START WITH. ENJOY THE GAME.")
+
+def first_game():
     O = 100
     print("FOR THE FIRST GAME, WE WILL PLAY ON THE WHEEL OF CHANCE.")
     print("THE OBJECT IS SIMPLE. GUESS WHAT SUITE WILL APPEAR ON THE")
@@ -44,3 +44,45 @@ def main():
 
     Z = int(4*round(1)+1)
     print("****" + Z + "****")
+    if (Z == A):
+
+    print("YOU WIN ON DIAMONDS")
+    print("YOU WIN ON SPADES")
+    print("YOU WIN ON HEARTS")
+    print("YOU WIN ON CLUBS")
+    print("YOU LOSE")
+    print("AT THE END OF PART 1, YOU HAVE $" + O)
+    return O
+
+def second_game():
+    for i in range(5):
+        print()
+    print("THIS IS THE GAME OF IN BETWEEN. THE OBJECT IS: 5 CARDS WILL")
+    print("BE DEALT OUT. IF ANY CARD IS LESS THAN A 3 OR GREATER THAN A")
+    print("10, THE GAME IS OVER. YOU MAY BET UP TO $30. YOUR MONEY")
+    print("WILL BE DOUBLED EACH TIME YOU ARE RIGHT. GOOD LUCK!")
+    print()
+    while True:
+        print("WHAT IS THE BET")
+        A = int(input())
+        if not
+            IF
+            A > 30
+            break
+       print("***YOU BET OVER THE HOUSE LIMIT ***")
+    T = T + 1:Z = int(12 * round(1) + 1)
+    print("CARD NUMBER " + T + " IS A " + )
+
+
+
+
+
+
+
+
+
+    return
+def main():
+    start_title()
+    O = first_game()
+    second_game()
