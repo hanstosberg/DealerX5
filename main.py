@@ -51,7 +51,7 @@ def first_game():
     Z = int(4*random(1)+1)
     print("****" + Z + "****")
     if (Z == A):
-        return
+        return 0
     print("YOU WIN ON DIAMONDS")
     print("YOU WIN ON SPADES")
     print("YOU WIN ON HEARTS")
