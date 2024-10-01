@@ -1,4 +1,4 @@
-
+import random
 
 
 def start_title():
@@ -36,7 +36,6 @@ def first_game():
 
     print("O.K. NOW THAT YOUR BET IS IN, WE WILL SPIN")
     print("THE WHEEL, GOOD LUCK!")
-    print("THE WHEEL, GOOD LUCK!")
     for B1 in range(10 * 570):
         pass
     print("THE WHEEL IS SLOWING DOWN.")
@@ -48,16 +47,28 @@ def first_game():
     print("THE SUITE IS ", )
     for B1 in range(4 * 570):
         pass
-    Z = int(4*random(1)+1)
-    print("****" + Z + "****")
+    Z = 1 + int(random.random() * 4)
+    print("****", Z , "****")
     if (Z == A):
-        return 0
-    print("YOU WIN ON DIAMONDS")
-    print("YOU WIN ON SPADES")
-    print("YOU WIN ON HEARTS")
-    print("YOU WIN ON CLUBS")
-    print("YOU LOSE")
-    print("AT THE END OF PART 1, YOU HAVE $" + O)
+        O = O + (11 * B8)
+        print("YOU WIN ON DIAMONDS")
+        O = O + (1 * B8)
+        print("YOU WIN ON SPADES")
+        O = O + (3 * B8)
+        print("YOU WIN ON HEARTS")
+        O = O + (3 * B8)
+        print("YOU WIN ON CLUBS")
+
+    if (Z != A):
+        O = O - (1 * B8)
+        print("YOU LOSE")
+
+
+
+
+
+
+    print("AT THE END OF PART 1, YOU HAVE $" , O)
     for i in range(5):
         print()
     return O
@@ -122,12 +133,6 @@ def first_game():
 
 
 
-
-
-
-
-
-def main():
-    start_title()
-    first_game()
+start_title()
+first_game()
     #second_game()
