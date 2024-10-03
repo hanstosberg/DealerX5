@@ -132,14 +132,16 @@ def third_game():
     print("IF THE HOUSE DEALS OUT LESS THAN A TOTAL OF 17 IN 6 TRIES,")
     print("YOU WILL KEEP THE MONEY YOU BET. GOOD LUCK!")
     print()
-    Z5 = 0
-    Z1 = 0
+
+
     print("THE DEALER WILL GET HIS CARDS FIRST")
     print()
-    C = 0
-    C3 = 0
+
+
     print("HERE I GO")
 
+    Z5 = 0
+    C = 0
     while True:
         Q = int(12 * random.random() + 1)
         Z5 = Q + Z5
@@ -168,7 +170,7 @@ def third_game():
                     print()
         else:
             if Z5 < 17:
-                pass
+                continue
             if Z5 > 21:
                 print("I BLEW IT. YOU WIN THE GREATEST AMOUNT ALLOWED TO BE")
                 print("BET BY THE HOUSE.")
@@ -176,7 +178,7 @@ def third_game():
                 print("YOU KEEP IT WITH OUR BEST WISHES.")
                 break
             if Z5 == 21:
-                print("I GOT BLACKJACK")
+                print("YOU BEAT THE DEALER WITH BLACKJACK!!")
                 print()
             if Z5 < 21:
                 print("I STOP. THE TOTAL FOR ME IS ",Z5)
@@ -191,10 +193,12 @@ def third_game():
                 print("***YOU BET OVER WHAT YOU HAVE***")
                 pass
             if A>50 or A <=0:
-                print("***YOU BET OVER WHAT YOU HAVE***")
+                print("***YOU BET OVER THE HOUSE LIMIT***")
                 pass
             break
 
+        C3 = 0
+        Z1 = 0
         Q1= int(12 * random.random() + 1)
         print("YOUR CARD IS A ",Q1)
         C3 = C3 + 1
@@ -217,18 +221,22 @@ def third_game():
             else:
                 print("STOP OR GO")
                 A = str(input())
-              #  if A == "STOP":
-
-
-
-
-
-
-
-
+                if A == "STOP":
+                    if Z1 == Z5:
+                        print("WE ARE THE SAME SO WE WILL PLAY AGAIN")
+                        pass
+                    if Z5 < Z1:
+                        print("THE DEALER LOST. YOU WIN")
+                        break
+                    if Z1 < 17:
+                        print("THE HOUSE DELT OUT LESS THAN 17 IN")
+                        print("6 TRIES. YOU GET THE MONEY YOU BET")
+                        break
 
     print("AT THE END OF PART 3, YOU HAVE $",O)
     if O <=0:
         print("AT THE END OF THE GAME YOU HAVE A GRAND TOTAL OF $",O)
     for i in range(5):
         print()
+
+third_game()
