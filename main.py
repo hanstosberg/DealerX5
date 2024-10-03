@@ -199,39 +199,57 @@ def third_game():
 
         C3 = 0
         Z1 = 0
-        Q1= int(12 * random.random() + 1)
-        print("YOUR CARD IS A ",Q1)
-        C3 = C3 + 1
-        Z1 = Q1 + Z1
-        print("SO FAR THE TOTAL FOR YOU IS ",Z1)
-        if (C3 == 6):
-            if Z1 < 17:
-                O += A
-                print("THE HOUSE DELT OUT LESS THAN 17 IN")
-                print("6 TRIES. YOU GET THE MONEY YOU BET")
-                break
+
+        flag = False
+        while True:
+            Q1= int(12 * random.random() + 1)
+            print("YOUR CARD IS A ",Q1)
+            C3 = C3 + 1
+            Z1 = Q1 + Z1
+            print("SO FAR THE TOTAL FOR YOU IS ",Z1)
+            if (C3 == 6):
+                if Z1 < 17:
+                    O += A
+                    print("THE HOUSE DELT OUT LESS THAN 17 IN")
+                    print("6 TRIES. YOU GET THE MONEY YOU BET")
+                    break
+                else:
+                    print("WE ARE THE SAME SO WE WILL PLAY AGAIN")
+                    pass
             else:
-                print("WE ARE THE SAME SO WE WILL PLAY AGAIN")
-                pass
-        else:
-            if Z1 > 21:
-                O = O - (1 * A)
-                print("THE DEALER BEAT YOU. YOU LOSE")
+                if Z1 > 21:
+                    O = O - (1 * A)
+                    print("THE DEALER BEAT YOU. YOU LOSE")
+                    break
+                else:
+                    print("STOP OR GO")
+                    AA = str(input())
+                    if AA == "STOP":
+                        if Z1 == Z5:
+                            print("WE ARE THE SAME SO WE WILL PLAY AGAIN")
+                            break
+                        if Z1 < Z5:
+                            O = O - (1*A)
+                            print("THE DEALER BEAT YOU. YOU LOSE")
+                            flag = True
+                            break
+                        if Z5 < Z1:
+                            print("THE DEALER LOST. YOU WIN")
+                            flag = True
+                            break       
+                        if Z1 < 17:
+                            print("THE HOUSE DELT OUT LESS THAN 17 IN")
+                            print("6 TRIES. YOU GET THE MONEY YOU BET")
+                            flag = True
+                            break
+                            
+                    if AA == "GO":
+                        continue
+            if flag == True:
                 break
-            else:
-                print("STOP OR GO")
-                A = str(input())
-                if A == "STOP":
-                    if Z1 == Z5:
-                        print("WE ARE THE SAME SO WE WILL PLAY AGAIN")
-                        pass
-                    if Z5 < Z1:
-                        print("THE DEALER LOST. YOU WIN")
-                        break
-                    if Z1 < 17:
-                        print("THE HOUSE DELT OUT LESS THAN 17 IN")
-                        print("6 TRIES. YOU GET THE MONEY YOU BET")
-                        break
+
+
+
 
     print("AT THE END OF PART 3, YOU HAVE $",O)
     if O <=0:
