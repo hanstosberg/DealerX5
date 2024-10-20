@@ -70,13 +70,8 @@ if (Z != A):
 print("AT THE END OF PART 1, YOU HAVE $", O)
 for i in range(5):
     print()
-#
-
 
 # second_game():
-
-
-
 print("THIS IS THE GAME OF IN BETWEEN. THE OBJECT IS: 5 CARDS WILL")
 print("BE DEALT OUT. IF ANY CARD IS LESS THAN A 3 OR GREATER THAN A")
 print("10, THE GAME IS OVER. YOU MAY BET UP TO $30. YOUR MONEY")
@@ -249,3 +244,110 @@ if O <=0:
     print("AT THE END OF THE GAME YOU HAVE A GRAND TOTAL OF $",O)
 for i in range(5):
     print()
+
+# part four
+print("NOW WE ENTER THE LAST CHANCE ROUND. IF YOU MAKE UP TO")
+print("$300 YOU WILL BE ABLE TO GO INTO THE BONUS ROUND. THE")
+print("OBJECT IS TO GUESS INTO WHICH CATEGORY THE TOTAL OF 5 CARDS")
+print("WILL ADD UP TO. THESE ARE THE CATEGORIES:")
+print()
+print("1=31-40 AT 1 TO 1 ODDS     2=41-50 AT 3 TO 1 ODDS")
+print("3=21-31 AT 3 TO 1 ODDS     4=6-20 AT 20 TO 1 ODDS")
+print("GOOD LUCK!!")
+print()
+print("AT THIS POINT IN THE GAME YOU HAVE $", O)
+while True:
+    print("WHAT CATEGORY DO YOU WANT")
+    A = int(input())
+    if A > 4:
+        print("***YOU BET ON A WRONG CATEGORY***")
+        continue
+    if A <= 4:
+        break  
+
+while True:
+    print("WHAT IS THE BET")
+    B = int(input())
+    if B <=0:
+        print("THE CARDS ARE NOW BEING ADDED UP")
+        print("GOOD LUCK!")
+        break
+    if B > 0:
+        print("***YOU BET OVER WHAT YOU HAVE***")
+        continue
+C1 = 0
+while True:
+    Q= int(12 * random.random() + 1)
+    C1=C1+1
+    print("CARD NUMBER ",C1," IS A ",Q)
+    Z=Z+Q
+    print("SO FAR: ",Z)
+    if C1==5:
+        if (A == 1 and Z < 31) and (A == 2 and 31 <= Z < 40) and  (A == 3 and 40 <= Z < 50) and (A == 4 and 50 <= Z):
+            O=O+(1*B)
+            print("YOU WIN")    
+            break
+    else:
+        O=O-(1*B)
+        print("YOU LOSE")
+        break
+print("AT THE END OF THE GAME YOU HAVE A GRAND TOTAL OF $",O) 
+if O < 300:
+    print("THIS IS THE END OF THE GAME. I HOPE YOU ENJOYED IT.")
+    exit
+for i in range(5):
+    print(" ")
+print("YOU ARE ELIGIBLE FOR THE BONUS ROUND.")
+print("DO YOU WANT TO PLAY IT")
+A = str(input())
+if A == "NO":
+    print("THIS IS THE END OF THE GAME. I HOPE YOU ENJOYED IT.")
+    exit
+print("THIS IS THE BONUS ROUND. IF YOU GET A TOTAL OF 1,000")
+print("WITHOUT GETTING A SPADE IN THE ROLLS, YOU WILL GET")
+print("A GRAND PRIZE OF $10,000.00. YOU MAY STOP AT ANY POINT")
+print("DURING THE GAME. YOU WILL KEEP WHAT YOU MADE. GOOD LUCK!")
+print()
+A = [] * 6
+B = [] * 5 
+A9 = "SPADES"
+B7 = 0
+print("THE DICE ARE ROLLING")
+print("GOOD LUCK.")
+print("THE DICE ARE")
+X=int(5 * random.random() + 1)
+A[1]=50
+A[2]=100
+A[3]=150
+A[4]=200
+A[5]=0
+Y=int(4 * random.random() + 1)
+B[1]=50
+B[2]=100
+B[3]=150
+B[4]=200
+if A(X)==0:
+    print("****",A9,B(Y),"****")
+    print("TOTAL ",B(Y))
+print("****",A(X),B(Y),"****")
+print("TOTAL ",A(X)+B(Y))
+B7=B7+(A(X)+B(Y))
+print("YOU NOW HAVE ",B7)
+if B7 >= 1000:
+    for i in range(3):
+        print(" ")
+    B7=O+10000
+    print("               ","****CONGRATULATIONS****")
+    print("YOU WON THE GRAND PRIZE. AT THE END OF THE GAME, YOU HAVE") 
+    for i in range(3):
+        print()
+    print(("                  ","*******",B7,"******"))
+    print("THIS IS THE END OF THE GAME. I HOPE YOU ENJOYED IT.")
+print("STOP OR GO")
+B = str(input())
+if B=="GO":
+    pass
+print("SMART MOVE. YOU GET THE MONEY FROM THE BEGINNING OF")
+print("THE GAME PLUS THE BONUS ROUND. AT THE END OF THE GAME")
+print("YOU HAVE THE GRAND TOTAL OF $",B7+O)
+print("THIS IS THE END OF THE GAME. I HOPE YOU ENJOYED IT.")
