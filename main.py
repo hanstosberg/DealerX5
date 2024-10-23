@@ -1,9 +1,16 @@
 import random
 
+
+    # start_title()
+
+
+
 # start_title():
-print("DEALER'S CHOICE")
-print("CREATIVE COMPUTING")
-print("MORRISTOWN, NEW JERSEY")
+print("                     DEALER'S CHOICE")
+print("                    CREATIVE COMPUTING")
+print("                  MORRISTOWN, NEW JERSEY")
+print()
+print()
 print()
 print("THIS PROGRAM WILL SIMULATE THE T.V. SHOW, DEALER'S CHOICE.")
 print("YOU HAVE $100 TO START WITH. ENJOY THE GAME.")
@@ -18,15 +25,16 @@ print()
 print("1=DIAMONDS AT 11 TO 1 ODDS          2=SPADES AT 1 TO 1 ODDS.")
 print("3=HEARTS AT 3 TO 1 ODDS             4=CLUBS AT 3 TO 1 ODDS.")
 print("YOU MAY BET UP TO $25. GOOD LUCK!")
+print()
 while True:
-    print("WHAT SUITE DO YOU WANT")
+    print("WHAT SUITE DO YOU WANT? ")
     A = int(input())
     if not (A > 4 or A < 1):
         break
     print("***YOU PICKED A WRONG SUITE***")
 
 while True:
-    print("WHAT IS THE BET")
+    print("WHAT IS THE BET? ")
     B8 = int(input())
 
     if not (B8 > 25 or B8 <= 0):
@@ -46,7 +54,9 @@ for B1 in range(7 * 570):
 print("THE SUITE IS ", )
 for B1 in range(4 * 570):
     pass
-Z = int(4 * random.random() + 1)
+
+#Z = int(4 * random.random() + 1)
+Z = 2
 print("****", Z, "****")
 if (Z == A):
     if Z == 1:
@@ -76,7 +86,7 @@ print("10, THE GAME IS OVER. YOU MAY BET UP TO $30. YOUR MONEY")
 print("WILL BE DOUBLED EACH TIME YOU ARE RIGHT. GOOD LUCK!")
 print()
 while True:
-    print("WHAT IS THE BET")
+    print("WHAT IS THE BET? ")
     A = int(input())
     if not (A > 30):
         break
@@ -86,7 +96,8 @@ B = 0
 while True:
 
     T = T + 1
-    Z = int(12 * random.random() + 1)
+    #Z = int(12 * random.random() + 1)
+    Z = 11
     print("CARD NUMBER ", T, " IS A ", Z)
     B += (2 * A)
     if (Z < 3 or Z > 10):
@@ -124,7 +135,8 @@ print("HERE I GO")
 Z5 = 0
 C = 0
 while True:
-    Q = int(12 * random.random() + 1)
+    #Q = int(12 * random.random() + 1)
+    Q = 6
     Z5 = Q + Z5
     print("THE CARD IS A ", Q)
     C = C + 1
@@ -183,7 +195,8 @@ while True:
 
     flag = False
     while True:
-        Q1 = int(12 * random.random() + 1)
+        #Q1 = int(12 * random.random() + 1)
+        Q1 = 7
         print("YOUR CARD IS A ", Q1)
         C3 = C3 + 1
         Z1 = Q1 + Z1
@@ -357,3 +370,5 @@ while True:
     print("YOU HAVE THE GRAND TOTAL OF $", B7 + O)
     print("THIS IS THE END OF THE GAME. I HOPE YOU ENJOYED IT.")
     exit
+
+
