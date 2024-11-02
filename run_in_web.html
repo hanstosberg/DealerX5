@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.13.0/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.13.0/brython_stdlib.js"></script>
+    
+    <!-- Добавляем стили для черного фона и белого текста -->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<div id="result"></div>
+<div id="gameInfo"></div>
+<div id="oddsTable"></div>
+<div id="betLimit"></div>
+<div id="suiteChoice"></div>
+<div id="errorMessages"></div>
+<script type="text/python">
+from browser import document, bind
+from browser.html import BR, P, SPAN, DIV, INPUT, TEXTAREA, BUTTON
+import random
+
+# start_title():
+document <= SPAN("&nbsp;" * 22)
+document <=("DEALER'S CHOICE")
+document <= BR()
+document <= SPAN("&nbsp;" * 20)
+document <=("CREATIVE COMPUTING")
+document <= BR()
+document <= SPAN("&nbsp;" * 18)
+document <=("MORRISTOWN, NEW JERSEY")
+document <= BR()
+document <=()
+document <= BR()
+document <=()
+document <= BR()
+document <=()
+document <= BR()
+document <=("THIS PROGRAM WILL SIMULATE THE T.V. SHOW, DEALER'S CHOICE.")
+document <= BR()
+document <=("YOU HAVE $100 TO START WITH. ENJOY THE GAME.")
+document <= BR()
+
+# first_game()
+O = 100
+document <=("FOR THE FIRST GAME, WE WILL PLAY ON THE WHEEL OF CHANCE.")
+document <= BR()
+document <=("THE OBJECT IS SIMPLE. GUESS WHAT SUITE WILL APPEAR ON THE")
+document <= BR()
+document <=("WHEEL AND YOU WILL GET PAID AT THOSE ODDS IF YOU ARE RIGHT.")
+document <= BR()
+document <=("THEY ARE AS FOLLOWS:")
+document <= BR()
+document <=()
+document <= BR()
+document <=("1=DIAMONDS AT 11 TO 1 ODDS          2=SPADES AT 1 TO 1 ODDS.")
+document <= BR()
+document <=("3=HEARTS AT 3 TO 1 ODDS             4=CLUBS AT 3 TO 1 ODDS.")
+document <= BR()
+document <=("YOU MAY BET UP TO $25. GOOD LUCK!")
+document <= BR()
+document <=()
+document <= BR()
+
+while True:
+    document <=("WHAT SUITE DO YOU WANT? ")
+    #A = int(input())
+    input_element = INPUT(type="number", id="numberInput")
+    submit_button = BUTTON("Ввести")
+    # Добавляем элементы в контейнер
+    document <= input_element
+    A = 1
+
+    def process_input(ev):
+        
+        if ev.key == "Enter":
+            A = int(document["numberInput"].value)
+
+    document["numberInput"].bind("keypress", process_input)
+    document <= input_element.value
+    document <= BR()
+    if not (A > 4 or A < 1):
+        break
+    document <=("***YOU PICKED A WRONG SUITE***")
+    document <= BR()
+
+while True:
+    document <=("WHAT IS THE BET? ")
+    #B8 = int(input())
+    document["B8"].bind("keypress")
+    document <= BR()
+    if not (B8 > 25 or B8 <= 0):
+        break
+    document <=("***YOU BET OVER THE HOUSE LIMIT***")
+    document <= BR()
+
+document <=("O.K. NOW THAT YOUR BET IS IN, WE WILL SPIN")
+document <= BR()
+document <=("THE WHEEL, GOOD LUCK!")
+document <= BR()
+for B1 in range(10 * 570):
+    pass
+document <=("THE WHEEL IS SLOWING DOWN.")
+document <= BR()
+for B1 in range(7 * 570):
+    pass
+document <=("THE WHEEL IS STOPPING.")
+document <= BR()
+for B1 in range(7 * 570):
+    pass
+document <=("THE SUITE IS ", )
+document <= BR()
+for B1 in range(4 * 570):
+    pass
+
+Z = int(4 * random.random() + 1)
+document <=("****", Z, "****")
+document <= BR()
+if (Z == A):
+    if Z == 1:
+        O = O + (11 * B8)
+        document <=("YOU WIN ON DIAMONDS")
+        document <= BR()
+    elif Z == 2:
+        O = O + (1 * B8)
+        document <=("YOU WIN ON SPADES")
+        document <= BR()
+    elif Z == 3:
+        O = O + (3 * B8)
+        document <=("YOU WIN ON HEARTS")
+        document <= BR()
+    else:
+        O = O + (3 * B8)
+        document <=("YOU WIN ON CLUBS")
+        document <= BR()
+if (Z != A):
+    O = O - (1 * B8)
+    document <=("YOU LOSE")
+    document <= BR()
+
+document <=("AT THE END OF PART 1, YOU HAVE $", O)
+document <= BR()
+for i in range(5):
+    document <= ("")
+    document <= BR()
+
+
+</script>
+
+</body>
+</html>
+
+
