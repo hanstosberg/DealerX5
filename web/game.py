@@ -56,8 +56,8 @@ def main(custom_print=print, custom_input=input):
     for B1 in range(4 * 570):
         pass
 
-    #Z = int(4 * random.random() + 1)
-    Z = 2
+    Z = int(4 * random.random() + 1)
+    
     custom_print(f"**** {Z} ***")
     if (Z == A):
         if Z == 1:
@@ -97,8 +97,8 @@ def main(custom_print=print, custom_input=input):
     while True:
 
         T = T + 1
-        #Z = int(12 * random.random() + 1)
-        Z = 11
+        Z = int(12 * random.random() + 1)
+        
         custom_print(f"CARD NUMBER {T} IS A {Z}")
         B += (2 * A)
         if (Z < 3 or Z > 10):
@@ -136,8 +136,8 @@ def main(custom_print=print, custom_input=input):
     Z5 = 0
     C = 0
     while True:
-        #Q = int(12 * random.random() + 1)
-        Q = 6
+        Q = int(12 * random.random() + 1)
+        
         Z5 = Q + Z5
         custom_print(f"THE CARD IS A {Q}")
         C = C + 1
@@ -196,8 +196,8 @@ def main(custom_print=print, custom_input=input):
 
         flag = False
         while True:
-            #Q1 = int(12 * random.random() + 1)
-            Q1 = 7
+            Q1 = int(12 * random.random() + 1)
+            
             custom_print(f"YOUR CARD IS A {Q1}")
             C3 = C3 + 1
             Z1 = Q1 + Z1
