@@ -4,21 +4,26 @@ DealerX5 - это текстовая игра, симулирующая попу
 ![image](https://github.com/user-attachments/assets/04b4a27f-8668-42f5-9881-428b09c124ea)
 
 
-### 1. "THE WHEEL OF CHANCE". Задача игрока угадать какая масть выпадет.
+### 1. "THE WHEEL OF CHANCE". 
+Задача игрока угадать какая масть выпадет.
 ![image](https://github.com/user-attachments/assets/31b9908c-c465-4008-b8d0-3ca38713ce8e)
 
 
-### 2. "THE GAME OF IN BETWEEN". Поочередно выбрасываются 5 кард. Если карта больше 3х и меньше 10, то игрок удваивает ставку, в любой момент может остановитьтся.
+### 2. "THE GAME OF IN BETWEEN". 
+Поочередно выбрасываются 5 кард. Если карта больше 3х и меньше 10, то игрок удваивает ставку, в любой момент может остановитьтся.
 ![image](https://github.com/user-attachments/assets/a01813bb-fe6d-4026-864a-ba2da89ceaf8)
 
 
-### 3. "BLACKJACK <DEALER'S CHOICE STYLE>". Это классический блэкджек.
+### 3. "BLACKJACK <DEALER'S CHOICE STYLE>".
+Это классический блэкджек.
 ![image](https://github.com/user-attachments/assets/919bbe03-26fd-401c-aa91-e6ca77f6dfac)
 
-### 4. "LAST CHANCE ROUND". Задача игрока угадать какую сумму дают 5 выброшенных карт
+### 4. "LAST CHANCE ROUND".
+Задача игрока угадать какую сумму дают 5 выброшенных карт
 ![image](https://github.com/user-attachments/assets/2d30dfdc-d9d4-47a8-bb29-1c3d2de42e48)
 
-### 5. "BONUS ROUND". Если игроку не выпадут пики, то игрок получает $10.000.00
+### 5. "BONUS ROUND".
+Если игроку не выпадут пики, то игрок получает $10.000.00
 ![image](https://github.com/user-attachments/assets/e62a703d-d5be-43d4-a821-414aad894965)
 
 ## Описание проекта
